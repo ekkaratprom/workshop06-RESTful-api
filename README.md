@@ -5,6 +5,10 @@
  รอจน build successful
 >> gradlew test 
 มันจะโหลด libraries เยอะ(ครั้งเดียว) รอจน build successful
+
+```
+## Build 
+```
 >> gradlew bootRun
 การ start web server ของ spring boot 
 จะ error ที่ถูกต้องสำหรับการรันครั้งแรก
@@ -27,7 +31,7 @@ Open url=http://localhost:8080/ in a web browser
 * [Spring Boot](https://spring.io/projects/spring-boot)
 * [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 
-##### รัน production (.Jar) 
+##  Production RUN (.Jar) 
 ```
 >> gradlew bootJar 
 >> gradlew clean bootJar 
