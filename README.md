@@ -113,3 +113,22 @@ Response
     "age": 30
 }
 ```
+#### STEP 4 : create repo contain database config
++ create Table : User table
++ create Repo : interface UserRepository extends CrudRepository มาช่วยจัดการ Crud
++ insert โดย Controller เรียก repo เพื่อทำการ insert(Spring JPA)
+
+```
++ POST /users
+{
+    "name": "somkiat",
+    "age": 30
+}
+Response
+{
+    {
+    "id": 2, <-- @GeneratedValue(strategy = GenerationType.AUTO))
+    "name": "somkiat30"
+     }
+}
+```
