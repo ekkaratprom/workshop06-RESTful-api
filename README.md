@@ -132,3 +132,39 @@ Response
      }
 }
 ```
+#### Get All user from UserRepository
+```
+// http://localhost:8080/users
+
+{
+  "page": 1,
+  "item_per_page": 10,
+  "users": [
+    {
+      "id": 1,
+      "name": "somkiat"
+    },
+    {
+      "id": 2,
+      "name": "somkiat"
+    },
+    {
+      "id": 3,
+      "name": "somkiat"
+    },
+    {
+      "id": 4,
+      "name": "somkiat"
+    }
+  ]
+}
+```
+#### Get user by id from UserRepository
+```
+// http://localhost:8080/users/3
+
+{
+  "id": 3,
+  "name": "somkiat"
+}
+```
