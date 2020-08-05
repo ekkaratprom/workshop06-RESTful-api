@@ -12,18 +12,19 @@ import java.util.List;
 public class UserController {
 
     @GetMapping("/users")
-    public List<UserResponse> getAllUser(
-            @RequestParam(defaultValue = "2") String page,
-            @RequestParam(name = "item_per_page",defaultValue = "10") String itemPerPage){
-        PagingResponse pagingResponse = new PagingResponse(page,itemPerPage);
+    public PagingResponse getAllUser(
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(name = "item_per_page",defaultValue = "10") int itemPerPage){
+
+        PagingResponse pagingResponse = new PagingResponse(page, itemPerPage);
 
         List<UserResponse> userResponseList = new ArrayList<>();
         userResponseList.add(new UserResponse(1, "User 1"));
         userResponseList.add(new UserResponse(2, "User 2"));
         userResponseList.add(new UserResponse(3, "User 3"));
 
-        pagingResponse.setUsersResponse(userResponseList); //ออกแบบเพิ่มเติม
-        return userResponseList;
+        pagingResponse.setUserResponse(userResponseList); //ออกแบบเพิ่มเติม
+        return pagingResponse;
     }
 
     @GetMapping("/users/{id}")
