@@ -34,8 +34,8 @@ reference doc : https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/
 >> java -jar build\libs\demo-0.0.1-SNAPSHOT.jar
 
 ```
-#### STEP 1 : Get all users 
-http://localhost:8080/users
+#### STEP 1 : Get all users   (branch step01)
++ http://localhost:8080/users
 ```
 GET /users
 Response code = 200
@@ -52,8 +52,7 @@ Response code = 200
 ] 
 ```
 
-
-#### STEP 2 : Get user information with id 
+##### Get user information with id 
 + Dynamic end point 
 + Path variable
 http://localhost:8080/users/1
@@ -63,4 +62,14 @@ GET /user/<id>
     "id": 1,
     "name": "User 1"
 }
+```
+#### STEP 2 : (branch step_02)
++ Get all user + paging (Query string or parameter)
+```
+GET /users
+page=1
+items_per_page=10
+
+GET /users?page=2&items_per_page=15
+GET /users?items_per_page=15
 ```
