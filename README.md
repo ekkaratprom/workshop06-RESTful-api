@@ -99,7 +99,7 @@ GET /users?items_per_page=15
 }
 
 ```
-#### STEP 3 : Create a new user (POST)
+#### STEP 3 : Create a new user (POST) (branch step_03)
 ```
 + POST /users
 {
