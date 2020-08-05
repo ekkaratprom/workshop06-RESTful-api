@@ -1,18 +1,26 @@
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class UserController {
 
     @GetMapping("/users")
-    public UserResponse[] getAllUser(){
-        UserResponse[] userResponses = new UserResponse[2];
-        userResponses[0] = new UserResponse(1,"User 1");
-        userResponses[1] = new UserResponse(2,"User 2");
+    public List<UserResponse> getAllUser(){
+        List<UserResponse> userResponseList = new ArrayList<>();
+        userResponseList.add(new UserResponse(1, "User 1"));
+        userResponseList.add(new UserResponse(2, "User 2"));
+        userResponseList.add(new UserResponse(3, "User 3"));
+        return userResponseList;
+    }
 
-
-        return userResponses;
+    @GetMapping("/users/{id}")
+    public UserResponse getUserByID(@PathVariable int id){
+        return new UserResponse(id,"User " + id);
     }
 }
