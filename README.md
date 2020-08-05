@@ -73,3 +73,29 @@ items_per_page=10
 GET /users?page=2&items_per_page=15
 GET /users?items_per_page=15
 ```
+
+#### working with requestparam
+
+```
+// http://localhost:8080/users?page=2&item_per_page=15
+
+{
+  "page": 2,
+  "item_per_page": 15,
+  "users": [
+    {
+      "id": 1,
+      "name": "User 1"
+    },
+    {
+      "id": 2,
+      "name": "User 2"
+    },
+    {
+      "id": 3,
+      "name": "User 3"
+    }
+  ]
+}
+
+```
