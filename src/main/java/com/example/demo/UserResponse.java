@@ -7,6 +7,7 @@ public class UserResponse {
     public UserResponse(int id, String name) {
         this.id = id;
         this.name = name;
+        
     }
 
     //POJO (Plain Old Java Object)
