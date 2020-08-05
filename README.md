@@ -99,3 +99,17 @@ GET /users?items_per_page=15
 }
 
 ```
+#### STEP 3 : Create a new user (POST) (branch step_03)
+```
++ POST /users
+{
+    "name": "somkiat",
+    "age": 30
+}
+Response
+{
+    "id": 1234,
+    "name": "somkiat",
+    "age": 30
+}
+```
