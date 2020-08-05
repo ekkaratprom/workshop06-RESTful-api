@@ -32,9 +32,11 @@ public class UserController {
         PagingResponse pagingResponse = new PagingResponse(page, itemPerPage);
 
         List<UserResponse> userResponseList = new ArrayList<>();
-        userResponseList.add(new UserResponse(1, "User 1"));
-        userResponseList.add(new UserResponse(2, "User 2"));
-        userResponseList.add(new UserResponse(3, "User 3"));
+
+        List<User> users = (List<User>) userRepository.findAll();
+        for (User user: users) {
+            userResponseList.add(new UserResponse(user.getId(),user.getName()));
+        }
 
         pagingResponse.setUserResponse(userResponseList); //ออกแบบเพิ่มเติม
         return pagingResponse;
