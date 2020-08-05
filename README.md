@@ -1,5 +1,5 @@
 # workshop06-RESTful-api
-#### init project :
+## init project :
 ```
 >> gradlew
  รอจน build successful
@@ -15,35 +15,38 @@
 
 ```
 
-
-##### Notice : Build fail : check your java 
-```
->> javac -version
->> set JAVA_HOME=<PATH java>
-```
-
-#### Let's start
-reference doc : https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/html/
-
-Open url=http://localhost:8080/ in a web browser
-
-## Resources
-* [Spring Boot](https://spring.io/projects/spring-boot)
-* [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-
 ##  Production RUN (.Jar) 
 ```
 >> gradlew bootJar 
 >> gradlew clean bootJar 
 ```
 
-##### รัน (.Jar) 
+#### RUN (.Jar) 
 ```
 เข้า folder \libs
 >> java -jar //path
 >> java -jar build\libs\demo-0.0.1-SNAPSHOT.jar
+```
+
+##### Notice : Build fail : check your java version
+```
+>> javac -version
+>> set JAVA_HOME=<PATH java>
+```
+
+
+#### Let's start
+reference doc : https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/html/
+
+Open url=http://localhost:8080/ in a web browser
+
 
 ```
+
+## Resources
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+
 #### STEP 1 : Get all users   (branch step01)
 + http://localhost:8080/users
 ```
