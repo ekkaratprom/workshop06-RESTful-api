@@ -36,7 +36,7 @@ public class UserController {
 
         List<User> users = (List<User>) userRepository.findAll();
         for (User user: users) {
-            userResponseList.add(new UserResponse(user.getId(),user.getName()));
+            userResponseList.add(new UserResponse(user.getId(),user.getName(),user.getAge()));
         }
 
         pagingResponse.setUserResponse(userResponseList); //ออกแบบเพิ่มเติม

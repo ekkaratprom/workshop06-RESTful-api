@@ -3,16 +3,32 @@ package com.example.demo;
 public class UserResponse {
     private int id;
     private String name;
+    private int age;
+
 
     public UserResponse(int id, String name) {
+        this(id,name,0);
+    }
+
+    public UserResponse(int id, String name,int age) {
         this.id = id;
         this.name = name;
-
+        this.age = age;
     }
+
+
 
     //POJO (Plain Old Java Object)
     //Getter/Setter methods
 
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public int getId() {
         return id;
