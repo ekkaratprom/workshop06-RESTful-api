@@ -21,6 +21,12 @@
 #### Let's start
 reference doc : https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/html/
 
+Open url=http://localhost:8080/ in a web browser
+
+## Resources
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+
 ##### รัน production (.Jar) 
 ```
 >> gradlew bootJar 
@@ -130,5 +136,41 @@ Response
     "id": 2, <-- @GeneratedValue(strategy = GenerationType.AUTO))
     "name": "somkiat30"
      }
+}
+```
+#### Get All user from UserRepository
+```
+// http://localhost:8080/users
+
+{
+  "page": 1,
+  "item_per_page": 10,
+  "users": [
+    {
+      "id": 1,
+      "name": "somkiat"
+    },
+    {
+      "id": 2,
+      "name": "somkiat"
+    },
+    {
+      "id": 3,
+      "name": "somkiat"
+    },
+    {
+      "id": 4,
+      "name": "somkiat"
+    }
+  ]
+}
+```
+#### Get user by id from UserRepository
+```
+// http://localhost:8080/users/3
+
+{
+  "id": 3,
+  "name": "somkiat"
 }
 ```
