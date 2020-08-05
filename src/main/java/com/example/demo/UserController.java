@@ -2,9 +2,6 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 public class UserController {
 
@@ -20,14 +17,14 @@ public class UserController {
 
     @GetMapping("/user?")
     @ResponseBody
-    public String getUserWithPages(@RequestParam(required = false,defaultValue = "2") String page,
-                                   @RequestParam(name = "item_per_page",required = false,defaultValue = "15") String itemPerPage){
-        return "page=" + page + "item_per_page=" + itemPerPage;
+    public UserResponse getUserWithPages(@RequestParam(required = false,defaultValue = "2") int page,
+                                         @RequestParam(name = "item_per_page",required = false,defaultValue = "15") int itemPerPage){
+        return new UserResponse(page,itemPerPage);
     }
 
-    @GetMapping("/users/{id}")
-    public UserResponse getUserByID(@PathVariable int id){
-        return new UserResponse(id,"User " + id);
-    }
+//    @GetMapping("/users/{id}")
+//    public UserResponse getUserByID(@PathVariable int id){
+//        return new UserResponse(id,"User " + id);
+//    }
 
 }
