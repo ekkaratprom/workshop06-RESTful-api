@@ -21,6 +21,12 @@
 #### Let's start
 reference doc : https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/html/
 
+Open url=http://localhost:8080/ in a web browser
+
+## Resources
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
+
 ##### รัน production (.Jar) 
 ```
 >> gradlew bootJar 
