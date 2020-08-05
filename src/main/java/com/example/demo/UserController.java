@@ -9,8 +9,9 @@ public class UserController {
     @GetMapping("/users")
     public UserResponse[] getAllUser(){
         UserResponse[] userResponses = new UserResponse[2];
-        userResponses[0] = new UserResponse();
-        userResponses[1] = new UserResponse();
+        userResponses[0] = new UserResponse(1,"User 1");
+        userResponses[1] = new UserResponse(2,"User 2");
+
 
         return userResponses;
     }
