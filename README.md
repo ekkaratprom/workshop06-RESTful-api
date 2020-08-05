@@ -34,3 +34,33 @@ reference doc : https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/
 >> java -jar build\libs\demo-0.0.1-SNAPSHOT.jar
 
 ```
+#### STEP 1 : Get all users 
+http://localhost:8080/users
+```
+GET /users
+Response code = 200
+[
+	{
+		“id”: 1,
+		“name”: “User 1”
+},
+	{
+		“id”: 2,
+		“name”: “User 2”
+},
+
+] 
+```
+
+
+#### STEP 2 : Get user information with id 
++ Dynamic end point 
++ Path variable
+http://localhost:8080/users/1
+```
+GET /user/<id>
+{
+    "id": 1,
+    "name": "User 1"
+}
+```
