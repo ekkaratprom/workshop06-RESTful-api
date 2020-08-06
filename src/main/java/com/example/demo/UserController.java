@@ -1,6 +1,9 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -34,7 +37,11 @@ public class UserController {
 
         List<UserResponse> userResponseList = new ArrayList<>();
 
-        List<User> users = (List<User>) userRepository.findAll();
+        Pageable pageable = PageRequest.of(page-1, itemPerPage);
+
+        Page<User> users = userRepository.findAll(pageable);
+
+        //List<User> users = (List<User>) userRepository.findAll();
         for (User user: users) {
             userResponseList.add(new UserResponse(user.getId(),user.getName(),user.getAge()));
         }
